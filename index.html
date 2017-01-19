@@ -7,16 +7,16 @@
     <!--
     BeaqleJS - HTML5 and JavaScript framework for listening tests, <https://github.com/HSU-ANT/beaqlejs>
 
-    This file and all corresponding parts of BeaqleJS are published under the GPLv3 license, <http://www.gnu.org/licenses/>    
+    This file and all corresponding parts of BeaqleJS are published under the GPLv3 license, <http://www.gnu.org/licenses/>
     -->
 
 
     <title>BeaqleJS</title>
-    
+
     <!-- load the test config file -->
         <script src="config/example_config_intelligibility.js" type="text/javascript"></script>
     <!---->
-    
+
     <link type="text/css" href="css/smoothness/jquery-ui-1.8.18.custom.css" rel="Stylesheet" />
     <link type="text/css" href="css/styles.css" rel="Stylesheet" />
 
@@ -33,14 +33,14 @@
             // Uncomment one of the following lines to choose the desired test class
 
             //testHandle = new MushraTest(TestConfig);    // <-- MUSHRA test class
-#            //testHandle = new AbxTest(TestConfig);     // <-- ABX test class
+            //testHandle = new AbxTest(TestConfig);     // <-- ABX test class
             testHandle = new IntelligibilityTest(TestConfig);
 
             $('#Footer').prepend(testHandle.browserFeatureString() + '<br/>');
         };
     /* ]]> */
     </script>
-   
+
 </head>
 
 <body>
@@ -48,12 +48,12 @@
 <div id="Wrapper">
 
     <div id="TestTitle" class="commonBox">
-        <!-- overall title at the top 
+        <!-- overall title at the top
              DO NOT EDIT! This box is automatically filled with content!
         -->
         Loading...
     </div>
-    
+
     <!-- is displayed during load -->
     <div id="LoadOverlay" class="commonBox">
         <img src="img/ajax-loader.gif"/> &nbsp;&nbsp;&nbsp; Loading...
@@ -61,7 +61,7 @@
 
     <!-- introduction before the test starts -->
     <div id="TestIntroduction" class="commonBox">
-        
+
         <!-- edit here if you want to change the welcome message  and instructions -->
 
         <div style="text-align:left">
@@ -78,9 +78,9 @@
         </div>
         <br />
         <br />
-                        
+
         <!-- this button starts the first test -->
-        <button id="BtnStartTest" onclick="testHandle.startTests();">Start!</button>	
+        <button id="BtnStartTest" onclick="testHandle.startTests();">Start!</button>
     </div>
 
     <!-- final text after all tests have passed -->
@@ -90,7 +90,7 @@
         Thank you very much!
         <br />
         <br />
-        
+
         <!-- show some informations before submitting the results -->
         <div id="SubmitBox">
             <div id="SubmitError" class="error">
@@ -104,7 +104,7 @@
             </p>
             <p class="submitDownload">
                 <!-- edit here if you want to change the information about online submission, e.g. add privacy policy information -->
-                Please download and save the results. Entering a name or email address is not mandatory 
+                Please download and save the results. Entering a name or email address is not mandatory
                 but it would help us to contact you if we have further questions. You can also leave a comment.
             </p>
             <table border=0 style="margin-left: auto;margin-right: auto;">
@@ -120,21 +120,21 @@
                 Results should be send to <span class="supervisorEmail"></span>
             </p>
         </div>
-        
+
         <!-- the test results are displayed in this box -->
         <div id="ResultsBox">
         </div>
     </div>
 
     <div id="TableContainer" class="commonBox">
-        <!-- container for the test items and sliders 
+        <!-- container for the test items and sliders
              DO NOT EDIT! This box is automatically filled with content!
-        -->    
+        -->
 
         <!-- heading for the single test -->
         <div id="TestHeading">
         </div>
-    
+
     </div>
 
     <!-- controls to go to next/previous test -->
@@ -149,23 +149,23 @@
         <div id="duration">
             <span>00:00</span>
         </div>
-        
+
         <div id="TimeLine">
             <div id="ProgressBar"></div>
             <div id="ABRange"></div>
         </div>
-        
+
         <div>
-            <input id="ChkLoopAudio" type="checkbox" value="Loop" /><label for="BtnLoopAudio">Loop</label>				
+            <input id="ChkLoopAudio" type="checkbox" value="Loop" /><label for="BtnLoopAudio">Loop</label>
         </div>
-        
+
         <div id="Volume">
             Volume
             <div id="VolumeSlider"></div>
         </div>
-        
+
         <br style="clear:both"/>
-    
+
     </div>
 
     <!-- Footer -->

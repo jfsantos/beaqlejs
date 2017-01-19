@@ -793,10 +793,7 @@ ListeningTest.prototype.SubmitTestResults = function() {
             type: "POST",
             timeout: 5000,
             url: testHandle.TestConfig.BeaqleServiceURL,
-            data: {
-                'testresults': JSON.stringify(EvalResults),
-                'username': UserObj.UserName
-            },
+            data: JSON.stringify(EvalResults),
             dataType: 'json'
         })
         .done(function(response) {

@@ -7,8 +7,7 @@ var TestConfig = {
   "ShowResults": false,
   "EnableABLoop": false,
   "EnableOnlineSubmission": true,
-  "BeaqleServiceURL": "http://localhost:8080/submit",
-  "SupervisorContact": "joao.eel@gmail.com", 
+  "BeaqleServiceURL": "/submit",
   "Testsets": [
     //    
     {
